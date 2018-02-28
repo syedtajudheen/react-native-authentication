@@ -5,7 +5,7 @@ import {
 } from 'react-navigation';
 import Login from './app/components/Login'
 import Signup from './app/components/Signup'
-import Logout from './app/components/Logout'
+import Home from './app/components/Home'
 import firebase from 'firebase'
 
 export default class App extends React.Component {
@@ -23,7 +23,7 @@ export default class App extends React.Component {
     const Navigation = StackNavigator({
       Login: { screen: Login },
       Signup: { screen: Signup},
-      Logout: { screen: Logout },
+      Home: { screen: Home },
     });
     return (
       

@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import Logout from './Logout'
+import Home from './Home'
 import {View , Button, Text, TextInput, Image, StyleSheet, Alert} from 'react-native'
 import {Input} from './common/index'
 import firebase from 'firebase'
@@ -26,7 +26,7 @@ export default class Login extends Component{
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (reg.test(this.state.email) === true){
           firebase.auth().signInWithEmailAndPassword(this.state.email,this.state.password)
-            .then(()=> this.props.navigation.navigate('Logout'))
+            .then(()=> this.props.navigation.navigate('Home'))
             .catch(()=> this.setState({error: 'Invalid Email Id or Password'}))
         }
         else{
@@ -71,15 +71,17 @@ const styles = StyleSheet.create({
     },
     buttonview:{
         paddingTop: 20,
-        paddingLeft: 80,
-        paddingRight: 80
+        paddingLeft: 90,
+        paddingRight: 90,
+        borderRadius:50
     },
     imgpadding:{
         paddingTop: 20,
         paddingBottom: 30
     },
     button:{
-        backgroundColor: 'red'
+        backgroundColor: 'red',
+        borderRadius:5
     },
     signup:{
         alignSelf: 'center',

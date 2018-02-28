@@ -22,7 +22,9 @@ export default class Input extends Component{
 }
 const styles = StyleSheet.create({
     view:{
-        padding: 3,
+        padding: 0,
+        paddingLeft:10,
+        paddingRight: 10,
         flexDirection: 'row',
         backgroundColor: 'white',
         borderBottomColor: 'grey',
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     },
     text:{
         padding: 9,
-        fontSize: 17
+        fontSize: 17,
     },
     input:{
         padding: 9,

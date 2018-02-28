@@ -1,5 +1,4 @@
 import React,{Component} from 'react'
-import Logout from './Logout'
 import {View , Button, Text, TextInput, Image, StyleSheet, Alert} from 'react-native'
 import {Input} from './common/index'
 import firebase from 'firebase'
